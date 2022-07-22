@@ -55,14 +55,16 @@ public class Panel extends JPanel {
                     case KeyEvent.VK_DOWN :
                         yPos += ( ke.isShiftDown() ) ? MEGA_STEP : SINGLE_STEP;
                         if ( ( yPos + SQUARE_SIZE ) > PANEL_HEIGHT )
-                            yPos = PANEL_HEIGHT - SQUARE_SIZE;
+                          //  yPos = PANEL_HEIGHT - SQUARE_SIZE;
+                            yPos = 0;
                         repaint();
                         break;
                     case KeyEvent.VK_D :
                     case KeyEvent.VK_RIGHT :
                         xPos += ( ke.isShiftDown() ) ? MEGA_STEP : SINGLE_STEP;
                         if ( ( xPos + SQUARE_SIZE ) > PANEL_WIDTH )
-                            xPos = PANEL_WIDTH - SQUARE_SIZE;
+                        //    xPos = PANEL_WIDTH - SQUARE_SIZE;
+                            xPos = 0;
                         repaint();
                         break;
                 }
